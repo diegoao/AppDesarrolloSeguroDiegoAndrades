@@ -13,11 +13,10 @@ protocol RemoteDataSourceProtocol {
     var urlRequestHelper: URLRequestHelperProtocol { get }
     
     // MARK: Functions
-    func pokemon() async throws -> ([PokemonList], PokemonServerError)?
+    func pokemon() async throws -> ([PokemonModel]?, PokemonServerError)?
 }
 
 enum PokemonServerError {
-    case authenticationError
     case serverError
     case unknownError
     case LoadServerSuccess

@@ -15,7 +15,7 @@
 		52847F602BF9268B005A7048 /* PracticaDesarrolloSeguroDiegoAndradesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52847F5F2BF9268B005A7048 /* PracticaDesarrolloSeguroDiegoAndradesUITests.swift */; };
 		52847F622BF9268B005A7048 /* PracticaDesarrolloSeguroDiegoAndradesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52847F612BF9268B005A7048 /* PracticaDesarrolloSeguroDiegoAndradesUITestsLaunchTests.swift */; };
 		52847F792BFA0DE0005A7048 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52847F782BFA0DE0005A7048 /* EndPoints.swift */; };
-		52847F7C2BFA13CC005A7048 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52847F7B2BFA13CC005A7048 /* Pokemon.swift */; };
+		52847F7C2BFA13CC005A7048 /* PokemonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52847F7B2BFA13CC005A7048 /* PokemonModel.swift */; };
 		52847F7E2BFA1479005A7048 /* RemoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52847F7D2BFA1479005A7048 /* RemoteDataSourceImpl.swift */; };
 		52847F802BFA14D0005A7048 /* URLRequestHelperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52847F7F2BFA14D0005A7048 /* URLRequestHelperImpl.swift */; };
 		52847F822BFA1516005A7048 /* URLRequestHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52847F812BFA1516005A7048 /* URLRequestHelperProtocol.swift */; };
@@ -56,7 +56,7 @@
 		52847F5F2BF9268B005A7048 /* PracticaDesarrolloSeguroDiegoAndradesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticaDesarrolloSeguroDiegoAndradesUITests.swift; sourceTree = "<group>"; };
 		52847F612BF9268B005A7048 /* PracticaDesarrolloSeguroDiegoAndradesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticaDesarrolloSeguroDiegoAndradesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		52847F782BFA0DE0005A7048 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
-		52847F7B2BFA13CC005A7048 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		52847F7B2BFA13CC005A7048 /* PokemonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonModel.swift; sourceTree = "<group>"; };
 		52847F7D2BFA1479005A7048 /* RemoteDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSourceImpl.swift; sourceTree = "<group>"; };
 		52847F7F2BFA14D0005A7048 /* URLRequestHelperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestHelperImpl.swift; sourceTree = "<group>"; };
 		52847F812BFA1516005A7048 /* URLRequestHelperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestHelperProtocol.swift; sourceTree = "<group>"; };
@@ -116,12 +116,11 @@
 		52847F432BF92689005A7048 /* PracticaDesarrolloSeguroDiegoAndrades */ = {
 			isa = PBXGroup;
 			children = (
+				52847F6E2BFA0ADA005A7048 /* Presentation */,
 				52847F772BFA0B29005A7048 /* App */,
 				52847F732BFA0B04005A7048 /* Data */,
 				52847F702BFA0AEB005A7048 /* Domain */,
-				52847F6E2BFA0ADA005A7048 /* Presentation */,
 				52847F462BF92689005A7048 /* ContentView.swift */,
-				52847F482BF9268A005A7048 /* Assets.xcassets */,
 				52847F4A2BF9268A005A7048 /* Preview Content */,
 			);
 			path = PracticaDesarrolloSeguroDiegoAndrades;
@@ -191,7 +190,7 @@
 		52847F722BFA0AF9005A7048 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				52847F7B2BFA13CC005A7048 /* Pokemon.swift */,
+				52847F7B2BFA13CC005A7048 /* PokemonModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -235,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				52847F442BF92689005A7048 /* PracticaDesarrolloSeguroDiegoAndradesApp.swift */,
+				52847F482BF9268A005A7048 /* Assets.xcassets */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -391,7 +391,7 @@
 				52847F472BF92689005A7048 /* ContentView.swift in Sources */,
 				52847F842BFA1567005A7048 /* RemoteDataSourceProtocol.swift in Sources */,
 				52847F8F2BFA24C7005A7048 /* PokemonListView.swift in Sources */,
-				52847F7C2BFA13CC005A7048 /* Pokemon.swift in Sources */,
+				52847F7C2BFA13CC005A7048 /* PokemonModel.swift in Sources */,
 				52847F792BFA0DE0005A7048 /* EndPoints.swift in Sources */,
 				52847F822BFA1516005A7048 /* URLRequestHelperProtocol.swift in Sources */,
 				52847F452BF92689005A7048 /* PracticaDesarrolloSeguroDiegoAndradesApp.swift in Sources */,

@@ -12,7 +12,6 @@ enum Status {
 }
 
 enum PokemonError {
-    case authenticationError
     case serverError
     case unknownError
     case none
@@ -34,16 +33,14 @@ final class RootViewModel: ObservableObject {
     func onPokemon(completion: ((PokemonError) -> Void)?) async {
         
         do {
-            if let (pokelist, loginError) = try await repository.pokemon() {
-                switch loginError {
-                case .authenticationError:
-                    completion?(.authenticationError)
+            if let (pokelist, pokemonError) = try await repository.pokemon() {
+                switch pokemonError {
                 case .serverError:
                     completion?(.serverError)
                 case .unknownError:
                     completion?(.unknownError)
                 case .LoadServerSuccess:
-                    print(pokelist)
+                    print(pokelist ?? "")
                     completion?(.none)
                 }
             }
