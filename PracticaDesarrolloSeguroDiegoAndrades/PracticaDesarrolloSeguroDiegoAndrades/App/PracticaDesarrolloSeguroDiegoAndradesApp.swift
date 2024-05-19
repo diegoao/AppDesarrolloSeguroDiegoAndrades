@@ -11,7 +11,10 @@ import SwiftUI
 struct PracticaDesarrolloSeguroDiegoAndradesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let remoteDataSource = RemoteDataSourceImpl()
+            let repository = RepositoryImpl(remoteDataSource: remoteDataSource)
+            RootView()
+                .environmentObject(RootViewModel(repository: repository))
         }
     }
 }

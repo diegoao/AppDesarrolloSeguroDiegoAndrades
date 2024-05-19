@@ -14,6 +14,17 @@
 		52847F562BF9268B005A7048 /* PracticaDesarrolloSeguroDiegoAndradesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52847F552BF9268B005A7048 /* PracticaDesarrolloSeguroDiegoAndradesTests.swift */; };
 		52847F602BF9268B005A7048 /* PracticaDesarrolloSeguroDiegoAndradesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52847F5F2BF9268B005A7048 /* PracticaDesarrolloSeguroDiegoAndradesUITests.swift */; };
 		52847F622BF9268B005A7048 /* PracticaDesarrolloSeguroDiegoAndradesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52847F612BF9268B005A7048 /* PracticaDesarrolloSeguroDiegoAndradesUITestsLaunchTests.swift */; };
+		52847F792BFA0DE0005A7048 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52847F782BFA0DE0005A7048 /* EndPoints.swift */; };
+		52847F7C2BFA13CC005A7048 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52847F7B2BFA13CC005A7048 /* Pokemon.swift */; };
+		52847F7E2BFA1479005A7048 /* RemoteDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52847F7D2BFA1479005A7048 /* RemoteDataSourceImpl.swift */; };
+		52847F802BFA14D0005A7048 /* URLRequestHelperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52847F7F2BFA14D0005A7048 /* URLRequestHelperImpl.swift */; };
+		52847F822BFA1516005A7048 /* URLRequestHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52847F812BFA1516005A7048 /* URLRequestHelperProtocol.swift */; };
+		52847F842BFA1567005A7048 /* RemoteDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52847F832BFA1567005A7048 /* RemoteDataSourceProtocol.swift */; };
+		52847F872BFA2264005A7048 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52847F862BFA2264005A7048 /* RepositoryProtocol.swift */; };
+		52847F8A2BFA22DD005A7048 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52847F892BFA22DD005A7048 /* RootViewModel.swift */; };
+		52847F8C2BFA22E9005A7048 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52847F8B2BFA22E9005A7048 /* RootView.swift */; };
+		52847F8F2BFA24C7005A7048 /* PokemonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52847F8E2BFA24C7005A7048 /* PokemonListView.swift */; };
+		52847F912BFA27AF005A7048 /* RepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52847F902BFA27AF005A7048 /* RepositoryImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +55,17 @@
 		52847F5B2BF9268B005A7048 /* PracticaDesarrolloSeguroDiegoAndradesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PracticaDesarrolloSeguroDiegoAndradesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52847F5F2BF9268B005A7048 /* PracticaDesarrolloSeguroDiegoAndradesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticaDesarrolloSeguroDiegoAndradesUITests.swift; sourceTree = "<group>"; };
 		52847F612BF9268B005A7048 /* PracticaDesarrolloSeguroDiegoAndradesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticaDesarrolloSeguroDiegoAndradesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		52847F782BFA0DE0005A7048 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		52847F7B2BFA13CC005A7048 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		52847F7D2BFA1479005A7048 /* RemoteDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSourceImpl.swift; sourceTree = "<group>"; };
+		52847F7F2BFA14D0005A7048 /* URLRequestHelperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestHelperImpl.swift; sourceTree = "<group>"; };
+		52847F812BFA1516005A7048 /* URLRequestHelperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestHelperProtocol.swift; sourceTree = "<group>"; };
+		52847F832BFA1567005A7048 /* RemoteDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSourceProtocol.swift; sourceTree = "<group>"; };
+		52847F862BFA2264005A7048 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
+		52847F892BFA22DD005A7048 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		52847F8B2BFA22E9005A7048 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		52847F8E2BFA24C7005A7048 /* PokemonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListView.swift; sourceTree = "<group>"; };
+		52847F902BFA27AF005A7048 /* RepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +155,8 @@
 		52847F6E2BFA0ADA005A7048 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				52847F8D2BFA24B0005A7048 /* PokemonList */,
+				52847F882BFA22C1005A7048 /* RootView */,
 				52847F6F2BFA0AE5005A7048 /* Home */,
 			);
 			path = Presentation;
@@ -157,6 +181,9 @@
 		52847F712BFA0AF3005A7048 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				52847F812BFA1516005A7048 /* URLRequestHelperProtocol.swift */,
+				52847F832BFA1567005A7048 /* RemoteDataSourceProtocol.swift */,
+				52847F862BFA2264005A7048 /* RepositoryProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -164,6 +191,7 @@
 		52847F722BFA0AF9005A7048 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				52847F7B2BFA13CC005A7048 /* Pokemon.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,8 +200,8 @@
 			isa = PBXGroup;
 			children = (
 				52847F762BFA0B1F005A7048 /* Utils */,
-				52847F752BFA0B19005A7048 /* Remote */,
 				52847F742BFA0B0B005A7048 /* Repository */,
+				52847F752BFA0B19005A7048 /* Remote */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -181,6 +209,7 @@
 		52847F742BFA0B0B005A7048 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				52847F902BFA27AF005A7048 /* RepositoryImpl.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -188,6 +217,9 @@
 		52847F752BFA0B19005A7048 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				52847F782BFA0DE0005A7048 /* EndPoints.swift */,
+				52847F7D2BFA1479005A7048 /* RemoteDataSourceImpl.swift */,
+				52847F7F2BFA14D0005A7048 /* URLRequestHelperImpl.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -205,6 +237,23 @@
 				52847F442BF92689005A7048 /* PracticaDesarrolloSeguroDiegoAndradesApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		52847F882BFA22C1005A7048 /* RootView */ = {
+			isa = PBXGroup;
+			children = (
+				52847F892BFA22DD005A7048 /* RootViewModel.swift */,
+				52847F8B2BFA22E9005A7048 /* RootView.swift */,
+			);
+			path = RootView;
+			sourceTree = "<group>";
+		};
+		52847F8D2BFA24B0005A7048 /* PokemonList */ = {
+			isa = PBXGroup;
+			children = (
+				52847F8E2BFA24C7005A7048 /* PokemonListView.swift */,
+			);
+			path = PokemonList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,8 +386,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52847F8A2BFA22DD005A7048 /* RootViewModel.swift in Sources */,
+				52847F7E2BFA1479005A7048 /* RemoteDataSourceImpl.swift in Sources */,
 				52847F472BF92689005A7048 /* ContentView.swift in Sources */,
+				52847F842BFA1567005A7048 /* RemoteDataSourceProtocol.swift in Sources */,
+				52847F8F2BFA24C7005A7048 /* PokemonListView.swift in Sources */,
+				52847F7C2BFA13CC005A7048 /* Pokemon.swift in Sources */,
+				52847F792BFA0DE0005A7048 /* EndPoints.swift in Sources */,
+				52847F822BFA1516005A7048 /* URLRequestHelperProtocol.swift in Sources */,
 				52847F452BF92689005A7048 /* PracticaDesarrolloSeguroDiegoAndradesApp.swift in Sources */,
+				52847F802BFA14D0005A7048 /* URLRequestHelperImpl.swift in Sources */,
+				52847F872BFA2264005A7048 /* RepositoryProtocol.swift in Sources */,
+				52847F912BFA27AF005A7048 /* RepositoryImpl.swift in Sources */,
+				52847F8C2BFA22E9005A7048 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
