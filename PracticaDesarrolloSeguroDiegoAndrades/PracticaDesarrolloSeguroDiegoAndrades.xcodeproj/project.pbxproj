@@ -94,7 +94,10 @@
 		52847F432BF92689005A7048 /* PracticaDesarrolloSeguroDiegoAndrades */ = {
 			isa = PBXGroup;
 			children = (
-				52847F442BF92689005A7048 /* PracticaDesarrolloSeguroDiegoAndradesApp.swift */,
+				52847F772BFA0B29005A7048 /* App */,
+				52847F732BFA0B04005A7048 /* Data */,
+				52847F702BFA0AEB005A7048 /* Domain */,
+				52847F6E2BFA0ADA005A7048 /* Presentation */,
 				52847F462BF92689005A7048 /* ContentView.swift */,
 				52847F482BF9268A005A7048 /* Assets.xcassets */,
 				52847F4A2BF9268A005A7048 /* Preview Content */,
@@ -125,6 +128,83 @@
 				52847F612BF9268B005A7048 /* PracticaDesarrolloSeguroDiegoAndradesUITestsLaunchTests.swift */,
 			);
 			path = PracticaDesarrolloSeguroDiegoAndradesUITests;
+			sourceTree = "<group>";
+		};
+		52847F6E2BFA0ADA005A7048 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				52847F6F2BFA0AE5005A7048 /* Home */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		52847F6F2BFA0AE5005A7048 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		52847F702BFA0AEB005A7048 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				52847F722BFA0AF9005A7048 /* Models */,
+				52847F712BFA0AF3005A7048 /* Protocols */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		52847F712BFA0AF3005A7048 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		52847F722BFA0AF9005A7048 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52847F732BFA0B04005A7048 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				52847F762BFA0B1F005A7048 /* Utils */,
+				52847F752BFA0B19005A7048 /* Remote */,
+				52847F742BFA0B0B005A7048 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		52847F742BFA0B0B005A7048 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		52847F752BFA0B19005A7048 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		52847F762BFA0B1F005A7048 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		52847F772BFA0B29005A7048 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				52847F442BF92689005A7048 /* PracticaDesarrolloSeguroDiegoAndradesApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
