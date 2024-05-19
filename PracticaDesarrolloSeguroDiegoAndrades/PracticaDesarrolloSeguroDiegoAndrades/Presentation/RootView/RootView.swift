@@ -15,13 +15,13 @@ struct RootView: View {
     var body: some View {
         switch (rootViewModel.status) {
         case Status.none:
-            PokemonListView()
-            
+           
+            PokemonHome()
         case Status.loading:
             Text("Loading")
             
         case Status.loaded:
-            Text("cargado")
+            PokemonListView()
         }
     }
 }

@@ -13,5 +13,5 @@ protocol RepositoryProtocol {
     var remoteDataSource: RemoteDataSourceProtocol { get }
     
     // MARK: Functions
-    func pokemon() async throws -> ([PokemonModel]?, PokemonServerError)?
+    func pokemon() async throws -> (PokemonModel?, PokemonServerError)?
 }

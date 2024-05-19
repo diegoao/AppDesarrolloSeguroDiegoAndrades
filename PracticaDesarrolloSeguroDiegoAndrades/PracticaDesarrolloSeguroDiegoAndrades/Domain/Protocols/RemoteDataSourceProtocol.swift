@@ -13,7 +13,7 @@ protocol RemoteDataSourceProtocol {
     var urlRequestHelper: URLRequestHelperProtocol { get }
     
     // MARK: Functions
-    func pokemon() async throws -> ([PokemonModel]?, PokemonServerError)?
+    func pokemon() async throws -> (PokemonModel?, PokemonServerError)?
 }
 
 enum PokemonServerError {

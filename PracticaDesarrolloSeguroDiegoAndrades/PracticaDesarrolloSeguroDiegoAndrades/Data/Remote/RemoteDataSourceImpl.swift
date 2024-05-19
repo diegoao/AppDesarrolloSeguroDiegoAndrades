@@ -13,7 +13,7 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
     var urlRequestHelper: URLRequestHelperProtocol = URLRequestHelperImpl()
     
 
-    func pokemon() async throws -> ([PokemonModel]?, PokemonServerError)? {
+    func pokemon() async throws -> (PokemonModel?, PokemonServerError)? {
         // Obtenemos la request
         guard let URLRequest = urlRequestHelper.pokemon() else {
             print("Error while creating the URLRequest for the heroes")
@@ -34,10 +34,10 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
         // Check the status code
         switch statusCode {
             
-        // If the status code is 200, return heroes, print heroes fetching success
+        // If the status code is 200, return list pokemon, print pokemon fetching success
         case 200:
             // Convert the data into a array of pokemon and return it
-            guard let dataPokemon = try? JSONDecoder().decode([PokemonModel].self, from: data) else {
+            guard let dataPokemon = try? JSONDecoder().decode(PokemonModel.self, from: data) else {
                 print("Error: error while decoding the response from the server")
                 return nil
             }

@@ -16,23 +16,7 @@ struct PokemonListView: View {
             VStack{
                 Text("Pokemon List").font(.title2)
                     .bold()
-                    .onAppear{
-                        Task {
-                            await rootViewModel.onPokemon() { readError in
-                                DispatchQueue.main.async {
-                                    switch readError {
-                                    case .serverError:
-                                        print("Server error pop up")
-                                    case .unknownError:
-                                        print("Unknown error pop up")
-                                    case .none:
-                                        print("Navigating to home")
-                                        rootViewModel.status = .loaded
-                                    }
-                                }
-                            }
-                        }
-                    }
+
                 
                 NavigationStack{
                     List{
@@ -46,7 +30,6 @@ struct PokemonListView: View {
                             .scaledToFill()
                             .edgesIgnoringSafeArea(.all)
                             .opacity(0.8))
-                            .id(2)
                     .background(Color.black.opacity(0.5))
                 }
             }

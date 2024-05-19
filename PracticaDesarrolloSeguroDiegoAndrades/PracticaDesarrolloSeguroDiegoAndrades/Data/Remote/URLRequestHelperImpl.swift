@@ -24,7 +24,7 @@ final class URLRequestHelperImpl: URLRequestHelperProtocol {
         // URL request
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"
-        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
     
         
         return urlRequest
