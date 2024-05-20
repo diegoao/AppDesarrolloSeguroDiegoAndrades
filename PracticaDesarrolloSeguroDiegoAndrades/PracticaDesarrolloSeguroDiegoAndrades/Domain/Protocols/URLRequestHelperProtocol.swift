@@ -13,4 +13,6 @@ protocol URLRequestHelperProtocol {
 
     // MARK: Functions
     func pokemon() -> URLRequest?
+    func infoPokemon(listPoke: Result) -> URLRequest?
+    
 }

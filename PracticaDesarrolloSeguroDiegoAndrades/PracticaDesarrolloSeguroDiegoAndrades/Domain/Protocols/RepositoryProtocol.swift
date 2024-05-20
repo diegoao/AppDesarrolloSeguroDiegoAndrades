@@ -14,4 +14,5 @@ protocol RepositoryProtocol {
     
     // MARK: Functions
     func pokemon() async throws -> (PokemonModel?, PokemonServerError)?
+    func InfoPokemon(pokeData: Result) async throws -> (PokemonInfoModel?)
 }

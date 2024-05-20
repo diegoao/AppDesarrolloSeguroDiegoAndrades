@@ -24,9 +24,23 @@ final class URLRequestHelperImpl: URLRequestHelperProtocol {
         // URL request
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"
-//        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
     
-        
+        return urlRequest
+    }
+    
+    func infoPokemon(listPoke: Result) -> URLRequest? {
+        // Get URL
+        let firstData = listPoke.url
+        guard let url = URL(string: firstData) else {
+            print("Error getting pokemon url")
+            return nil
+        }
+ 
+        // URL request
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "GET"
+        print(urlRequest)
         return urlRequest
     }
 }
+

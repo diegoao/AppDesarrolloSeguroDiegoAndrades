@@ -30,8 +30,8 @@ final class RootViewModel: ObservableObject {
     }
         
     // MARK: Functions
-    func onPokemon(completion: ((PokemonError) -> Void)?) async {
-        
+    func onPokemon(completion: ((PokemonError) -> Void)?) async -> [PokemonModel]{
+        var datos : [PokemonModel] = []
         do {
             if let (pokelist, pokemonError) = try await repository.pokemon() {
                 switch pokemonError {
@@ -40,13 +40,28 @@ final class RootViewModel: ObservableObject {
                 case .unknownError:
                     completion?(.unknownError)
                 case .LoadServerSuccess:
-                    print(pokelist ?? "")
+                    datos.append(pokelist!)
                     completion?(.none)
+                    
                 }
             }
         } catch {
             print("Error while login in onLogin catch block")
             completion?(.unknownError)
         }
+        return datos
+    }
+    
+    func onListPokemon(dataPoke: Result) async -> PokemonInfoModel{
+        var datos: PokemonInfoModel? = nil
+        do {
+            if let pokelist = try await repository.InfoPokemon(pokeData: dataPoke) {
+                    datos = pokelist
+                }
+            
+        } catch {
+            print("Error while login in onLogin catch block")
+        }
+        return datos!
     }
 }

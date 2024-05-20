@@ -10,6 +10,7 @@ import SwiftUI
 struct PokemonHome: View {
      
     @EnvironmentObject var rootViewModel: RootViewModel
+    @State var cargarInfoPokemon : Bool = false
     
     var body: some View {
         ZStack {
@@ -46,7 +47,7 @@ struct PokemonHome: View {
         }
         .onAppear{
             Task {
-                await rootViewModel.onPokemon() { readError in
+               let datos =  await rootViewModel.onPokemon() { readError in
                     DispatchQueue.main.async {
                         switch readError {
                         case .serverError:
@@ -54,10 +55,22 @@ struct PokemonHome: View {
                         case .unknownError:
                             print("Unknown error pop up")
                         case .none:
-                            print("Navigating to home")
-                            rootViewModel.status = .loaded
+                            print("Chargue Data Pokemon")
+                            self.cargarInfoPokemon = true
+
                         }
                     }
+                }
+                
+                if self.cargarInfoPokemon{
+                    guard let data = datos.first?.results else {
+                        print("Error dispatch data from Pokemon")
+                        return
+                    }
+                    for dato in data {
+                        await rootViewModel.onListPokemon(dataPoke: dato)
+                    }
+                    rootViewModel.status = .loaded
                 }
             }
         }
