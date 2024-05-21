@@ -39,7 +39,6 @@ final class URLRequestHelperImpl: URLRequestHelperProtocol {
         // URL request
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"
-        print(urlRequest)
         return urlRequest
     }
 }

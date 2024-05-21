@@ -18,6 +18,7 @@ enum PokemonError {
 }
 
 final class RootViewModel: ObservableObject {
+    @Published var listInfoPokemon: [PokemonInfoModel] = []
     
     // MARK: Properties
     let repository: RepositoryProtocol

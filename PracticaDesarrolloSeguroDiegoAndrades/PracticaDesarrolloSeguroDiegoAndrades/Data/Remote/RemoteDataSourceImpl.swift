@@ -22,7 +22,7 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
         
         // Get data and response from the server
         let (data, response) = try await URLSession.shared.data(for: URLRequest)
-        print("\(URLRequest)")
+    
         
         // Transform the response into a HTTPURLResponse to access the status code
         guard let httpResponse = response as? HTTPURLResponse else {
@@ -70,7 +70,7 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
         
         // Get data and response from the server
         let (data, response) = try await URLSession.shared.data(for: URLRequest)
-        print("\(URLRequest)")
+    
         
         // Transform the response into a HTTPURLResponse to access the status code
         guard let httpResponse = response as? HTTPURLResponse else {
@@ -89,7 +89,6 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
                 print("Error: error while decoding the response from the server")
                 return nil
             }
-            print("Pokemon successfully fetched from server: \(dataInfoPokemon)")
             return (dataInfoPokemon)
         // If the status code is 400, return nil, print bad request error
         case 400:

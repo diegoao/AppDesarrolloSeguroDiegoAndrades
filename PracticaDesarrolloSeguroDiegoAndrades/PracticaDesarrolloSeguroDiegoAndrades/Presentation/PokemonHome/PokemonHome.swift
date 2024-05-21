@@ -68,7 +68,7 @@ struct PokemonHome: View {
                         return
                     }
                     for dato in data {
-                        await rootViewModel.onListPokemon(dataPoke: dato)
+                        rootViewModel.listInfoPokemon.append(await rootViewModel.onListPokemon(dataPoke: dato))
                     }
                     rootViewModel.status = .loaded
                 }

@@ -9,6 +9,6 @@ import Foundation
 
 struct Endpoints {
     var baseURL: String = "https://pokeapi.co/api/v2"
-    let pokemon: String = "/pokemon/?limit=30"
+    let pokemon: String = "/pokemon/?limit=5"
 
 }
