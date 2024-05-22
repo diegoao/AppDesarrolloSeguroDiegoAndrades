@@ -7,9 +7,11 @@
 
 import SwiftUI
 
+
 struct PokemonRowView: View {
     var pokemon: PokemonInfoModel
     @State private var text: String = ""
+
 
     var body: some View {
     
@@ -35,7 +37,7 @@ struct PokemonRowView: View {
                     }
                     
                     VStack{
-                        AsyncImage(url: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png")) { photo in
+                        AsyncImage(url: URL(string: pokemon.sprites.other?.home.frontDefault ?? "")) { photo in
                             photo
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
@@ -79,10 +81,10 @@ struct PokemonRowView: View {
             }
         }
 }
-
+/*
 #Preview {
-    PokemonRowView(pokemon: PokemonInfoModel(species: Species(name: "Pikachu", url: ""), sprites: Sprites(front_default: "", other: Other(dreamWorld: DreamWorld(frontDefault: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg"))) ))
-}
-
+    PokemonRowView(pokemon: PokemonInfoModel(species: Species(name: "Pikachu", url: ""), sprites: Sprites(front_default: "", other: Other(dreamWorld: DreamWorld(frontDefault: "https://raw.githubusercontent//.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg"))) ))
+//}
+*/
 
 
