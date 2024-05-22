@@ -39,10 +39,10 @@ struct PokemonListView: View {
             }
         }
         
-        .onAppear {
-            // Puedes usar print aquí si necesitas depurar
-            print(rootViewModel.listInfoPokemon)
-        }
+//        .onAppear {
+//            // Puedes usar print aquí si necesitas depurar
+//            print(rootViewModel.listInfoPokemon)
+//        }
         
     }
     
