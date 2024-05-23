@@ -17,7 +17,6 @@ enum AESKeySize: Int {
 
 public class Crypto {
     // MARK: - Properties
-    private let sealedDataBox = "w2iZ7rjQIgtsWj7JJz8MHBHLQoCFErr36W0+UfuomDikiV8P3HjRNW7w9zLUDhX5WQx0v3PK3kaCd6ujGXgw8D7U2bYDz5bB"
     private let key: String
     
     // MARK: - Init
@@ -65,8 +64,8 @@ public class Crypto {
         }
     }
     
-    public func getDecryptedPublicKey () -> String? {
-        guard let sealedDataBoxData = Data(base64Encoded: sealedDataBox) else {
+    public func getDecrypted (data: String) -> String? {
+        guard let sealedDataBoxData = Data(base64Encoded: data) else {
             print("Error while decrypting the public key: sealed box is not valid")
             return nil
         }

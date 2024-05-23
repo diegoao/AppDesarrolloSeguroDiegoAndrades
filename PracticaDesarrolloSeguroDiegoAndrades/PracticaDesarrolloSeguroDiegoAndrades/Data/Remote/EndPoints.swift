@@ -8,7 +8,7 @@
 import Foundation
 
 struct Endpoints {
-    var baseURL: String = "https://pokeapi.co/api/v2"
-    let pokemon: String = "/pokemon/?limit=50"
+    var baseURL: String = "IHLHmyMnBUAQAKlFp4AdmmZhBn9k93R9NQrBDA+gmtyz6jT6v1Ys62Lhk8p/CJllbUxwDxk="
+    let pokemon: String = "PoTlSAEbtkOXf2RGIKY5NTNMZkPF3P8hnzuo0jj3wFUL+ysZQ8Mf74spgFl2zw=="
 
 }

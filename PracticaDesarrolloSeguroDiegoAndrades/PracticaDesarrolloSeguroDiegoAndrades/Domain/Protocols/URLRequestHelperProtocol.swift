@@ -7,7 +7,8 @@
 
 import Foundation
 protocol URLRequestHelperProtocol {
-    
+
+
     // MARK: Properties
     var endpoints: Endpoints { get }
 

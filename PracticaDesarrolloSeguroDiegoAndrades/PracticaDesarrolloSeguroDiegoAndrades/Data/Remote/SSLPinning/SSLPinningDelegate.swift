@@ -11,20 +11,19 @@ import CommonCrypto
 
 class SSLPinningDelegate: NSObject{
     // Instanciamos la clase Crypto
-    private let crypto = Crypto()
+    private var crypto = Crypto()
     
+    //Inilizalizamos 
     override init() {
-        self.crypto = Crypto()
+        self.crypto =  Crypto()
     }
-    
-    let localPublicKeyHashBase64 = "XM/zPZlyGRsb47ZGBJvaZGYVjQvjOrF6u5A5sxyDakk="
 }
 
 
 // MARK: - Funciones URLSessionDelegate
 extension SSLPinningDelegate: URLSessionDelegate{
     func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-        //Validamos el servidor
+
         
         
         //Obtengo el server trust
@@ -67,7 +66,7 @@ extension SSLPinningDelegate: URLSessionDelegate{
         
         
         //Compruebo que la clave pública local es igual que la del servidor
-        if serverHashBase64 == self.crypto.getDecryptedPublicKey() {
+        if serverHashBase64 == self.crypto.getDecrypted(data: "w2iZ7rjQIgtsWj7JJz8MHBHLQoCFErr36W0+UfuomDikiV8P3HjRNW7w9zLUDhX5WQx0v3PK3kaCd6ujGXgw8D7U2bYDz5bB") {
             completionHandler(.useCredential, URLCredential(trust: serverTrust))
             print("Filtro SSLPinnig pasado")
         }else{

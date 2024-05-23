@@ -8,16 +8,26 @@
 import Foundation
 
 final class URLRequestHelperImpl: URLRequestHelperProtocol {
-
+ 
     // MARK: Properties
     
     var endpoints: Endpoints = Endpoints()
     
     // MARK: Functions
     func pokemon() -> URLRequest? {
+        let crypto = Crypto()
+        guard let baseURL = crypto.getDecrypted(data: String("\(endpoints.baseURL)")),
+              let nPokemon = crypto.getDecrypted(data: String("\(endpoints.pokemon)")) else {
+            print("Error while creating URL: baseURL or nPokemon is nil")
+            return nil
+        }
+        
+        let urlString = baseURL + nPokemon
+        
+        
         // Get URL
-        guard let url = URL(string: "\(endpoints.baseURL)\(endpoints.pokemon)") else {
-            print("Error while creating URL from \(endpoints.baseURL)\(endpoints.pokemon)")
+        guard let url = URL(string: urlString) else {
+            print("Error while creating URL from \(urlString)")
             return nil
         }
         
