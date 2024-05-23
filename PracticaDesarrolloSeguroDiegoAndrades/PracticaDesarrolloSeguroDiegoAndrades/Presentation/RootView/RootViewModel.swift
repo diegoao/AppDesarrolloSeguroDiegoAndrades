@@ -52,7 +52,7 @@ final class RootViewModel: ObservableObject {
         }
         return datos
     }
-    
+ 
     func onListPokemon(dataPoke: Result) async -> PokemonInfoModel{
         var datos: PokemonInfoModel? = nil
         do {

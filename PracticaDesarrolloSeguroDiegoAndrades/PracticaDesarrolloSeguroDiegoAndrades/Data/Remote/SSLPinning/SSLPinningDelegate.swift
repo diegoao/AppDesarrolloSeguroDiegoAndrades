@@ -10,6 +10,12 @@ import CryptoKit
 import CommonCrypto
 
 class SSLPinningDelegate: NSObject{
+    // Instanciamos la clase Crypto
+    private let crypto = Crypto()
+    
+    override init() {
+        self.crypto = Crypto()
+    }
     
     let localPublicKeyHashBase64 = "XM/zPZlyGRsb47ZGBJvaZGYVjQvjOrF6u5A5sxyDakk="
 }
@@ -59,8 +65,9 @@ extension SSLPinningDelegate: URLSessionDelegate{
         //Convertir la public key data a sha 256 base64
         let serverHashBase64 = sha256CryptoKit(data: serverPublicKeyData)
         
+        
         //Compruebo que la clave pública local es igual que la del servidor
-        if serverHashBase64 == self.localPublicKeyHashBase64 {
+        if serverHashBase64 == self.crypto.getDecryptedPublicKey() {
             completionHandler(.useCredential, URLCredential(trust: serverTrust))
             print("Filtro SSLPinnig pasado")
         }else{
@@ -83,3 +90,33 @@ extension SSLPinningDelegate{
     }
 
 }
+
+
+ //MARK: - Ofuscación
+
+extension SSLPinningDelegate {
+    
+    func obfuscacionPublickey(publicKey: [UInt8]) -> String {
+        
+        publicKey.reduce("") { (result, character) -> String in
+            let comma = result == "" ? "" : ","
+            let numberFrom0ToChar = UInt8(Int.random(in: 0...Int(character)))
+            switch Int.random(in: 0...1){
+            case 0:
+                let numberToChar = character - numberFrom0ToChar
+                return "\(result)\(comma)\(String(format: "0x%02x", numberFrom0ToChar))\(String(format: "+0x%02x", numberToChar))"
+            default:
+                return "\(result)\(comma)\(String(format: "0x%02x", character + numberFrom0ToChar))\(String(format: "-0x%02x", numberFrom0ToChar))"
+            }
+        }
+    }
+    func desofuscarPublicKey(publicKey: [UInt8]) -> String {
+        guard let desofuscarPublicKey = String(data: Data(publicKey), encoding: .utf8) else {
+            print("Error desofuscando la publicKey")
+            return ("")
+        }
+        return desofuscarPublicKey
+    }
+}
+
+

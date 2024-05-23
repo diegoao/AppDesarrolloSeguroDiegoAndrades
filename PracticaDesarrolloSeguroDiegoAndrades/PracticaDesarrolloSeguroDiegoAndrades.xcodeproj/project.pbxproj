@@ -11,6 +11,7 @@
 		5276FB302BFD217900BA37F7 /* SpeciesPokemonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276FB2F2BFD217900BA37F7 /* SpeciesPokemonModel.swift */; };
 		5276FB332BFE89A300BA37F7 /* SSLPinningSecureURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276FB322BFE89A300BA37F7 /* SSLPinningSecureURL.swift */; };
 		5276FB352BFE8A5900BA37F7 /* SSLPinningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276FB342BFE8A5900BA37F7 /* SSLPinningDelegate.swift */; };
+		5276FB372BFFC2B800BA37F7 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276FB362BFFC2B800BA37F7 /* Crypto.swift */; };
 		52847F452BF92689005A7048 /* PracticaDesarrolloSeguroDiegoAndradesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52847F442BF92689005A7048 /* PracticaDesarrolloSeguroDiegoAndradesApp.swift */; };
 		52847F492BF9268A005A7048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52847F482BF9268A005A7048 /* Assets.xcassets */; };
 		52847F4C2BF9268A005A7048 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52847F4B2BF9268A005A7048 /* Preview Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		5276FB2F2BFD217900BA37F7 /* SpeciesPokemonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeciesPokemonModel.swift; sourceTree = "<group>"; };
 		5276FB322BFE89A300BA37F7 /* SSLPinningSecureURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSLPinningSecureURL.swift; sourceTree = "<group>"; };
 		5276FB342BFE8A5900BA37F7 /* SSLPinningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSLPinningDelegate.swift; sourceTree = "<group>"; };
+		5276FB362BFFC2B800BA37F7 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		52847F412BF92689005A7048 /* PracticaDesarrolloSeguroDiegoAndrades.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticaDesarrolloSeguroDiegoAndrades.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52847F442BF92689005A7048 /* PracticaDesarrolloSeguroDiegoAndradesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticaDesarrolloSeguroDiegoAndradesApp.swift; sourceTree = "<group>"; };
 		52847F482BF9268A005A7048 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			children = (
 				5276FB322BFE89A300BA37F7 /* SSLPinningSecureURL.swift */,
 				5276FB342BFE8A5900BA37F7 /* SSLPinningDelegate.swift */,
+				5276FB362BFFC2B800BA37F7 /* Crypto.swift */,
 			);
 			path = SSLPinning;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				52847F7E2BFA1479005A7048 /* RemoteDataSourceImpl.swift in Sources */,
 				52EAF6C72BFA919F00089233 /* PokemonHome.swift in Sources */,
 				52847F842BFA1567005A7048 /* RemoteDataSourceProtocol.swift in Sources */,
+				5276FB372BFFC2B800BA37F7 /* Crypto.swift in Sources */,
 				5276FB332BFE89A300BA37F7 /* SSLPinningSecureURL.swift in Sources */,
 				52847F8F2BFA24C7005A7048 /* PokemonListView.swift in Sources */,
 				52EAF6C92BFBC5A200089233 /* PokemonInfoModel.swift in Sources */,
