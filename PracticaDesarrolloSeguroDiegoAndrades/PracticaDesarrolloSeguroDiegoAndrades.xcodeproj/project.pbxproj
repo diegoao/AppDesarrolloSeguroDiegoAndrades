@@ -12,6 +12,7 @@
 		5276FB332BFE89A300BA37F7 /* SSLPinningSecureURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276FB322BFE89A300BA37F7 /* SSLPinningSecureURL.swift */; };
 		5276FB352BFE8A5900BA37F7 /* SSLPinningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276FB342BFE8A5900BA37F7 /* SSLPinningDelegate.swift */; };
 		5276FB372BFFC2B800BA37F7 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276FB362BFFC2B800BA37F7 /* Crypto.swift */; };
+		5276FB392C0062EA00BA37F7 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5276FB382C0062EA00BA37F7 /* Authentication.swift */; };
 		52847F452BF92689005A7048 /* PracticaDesarrolloSeguroDiegoAndradesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52847F442BF92689005A7048 /* PracticaDesarrolloSeguroDiegoAndradesApp.swift */; };
 		52847F492BF9268A005A7048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52847F482BF9268A005A7048 /* Assets.xcassets */; };
 		52847F4C2BF9268A005A7048 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52847F4B2BF9268A005A7048 /* Preview Assets.xcassets */; };
@@ -56,6 +57,8 @@
 		5276FB322BFE89A300BA37F7 /* SSLPinningSecureURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSLPinningSecureURL.swift; sourceTree = "<group>"; };
 		5276FB342BFE8A5900BA37F7 /* SSLPinningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSLPinningDelegate.swift; sourceTree = "<group>"; };
 		5276FB362BFFC2B800BA37F7 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
+		5276FB382C0062EA00BA37F7 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		5276FB3A2C008F1100BA37F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		52847F412BF92689005A7048 /* PracticaDesarrolloSeguroDiegoAndrades.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticaDesarrolloSeguroDiegoAndrades.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52847F442BF92689005A7048 /* PracticaDesarrolloSeguroDiegoAndradesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticaDesarrolloSeguroDiegoAndradesApp.swift; sourceTree = "<group>"; };
 		52847F482BF9268A005A7048 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -138,6 +141,7 @@
 		52847F432BF92689005A7048 /* PracticaDesarrolloSeguroDiegoAndrades */ = {
 			isa = PBXGroup;
 			children = (
+				5276FB3A2C008F1100BA37F7 /* Info.plist */,
 				52847F6E2BFA0ADA005A7048 /* Presentation */,
 				52847F772BFA0B29005A7048 /* App */,
 				52847F732BFA0B04005A7048 /* Data */,
@@ -251,6 +255,7 @@
 		52847F762BFA0B1F005A7048 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				5276FB382C0062EA00BA37F7 /* Authentication.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -423,6 +428,7 @@
 				52847F8A2BFA22DD005A7048 /* RootViewModel.swift in Sources */,
 				5276FB2E2BFD178A00BA37F7 /* PokemonRowView.swift in Sources */,
 				52847F7E2BFA1479005A7048 /* RemoteDataSourceImpl.swift in Sources */,
+				5276FB392C0062EA00BA37F7 /* Authentication.swift in Sources */,
 				52EAF6C72BFA919F00089233 /* PokemonHome.swift in Sources */,
 				52847F842BFA1567005A7048 /* RemoteDataSourceProtocol.swift in Sources */,
 				5276FB372BFFC2B800BA37F7 /* Crypto.swift in Sources */,
@@ -605,6 +611,7 @@
 				DEVELOPMENT_TEAM = 8Z9R3793D9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PracticaDesarrolloSeguroDiegoAndrades/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -635,6 +642,7 @@
 				DEVELOPMENT_TEAM = 8Z9R3793D9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PracticaDesarrolloSeguroDiegoAndrades/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

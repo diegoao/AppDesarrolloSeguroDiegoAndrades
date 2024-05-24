@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import LocalAuthentication
 
 struct PokemonHome: View {
      
     @EnvironmentObject var rootViewModel: RootViewModel
     @State var cargarInfoPokemon : Bool = false
     @State private var isLoading: Bool = false
+    let authentication: Authentication
+    init(){
+        self.authentication = Authentication(context: LAContext())
+    }
     
     var body: some View {
         ZStack {
@@ -24,7 +29,7 @@ struct PokemonHome: View {
             
             // Logo
             Spacer()
- 
+            
             Spacer()
             VStack {
                 Image(decorative: "Logo")
@@ -40,32 +45,38 @@ struct PokemonHome: View {
                 Spacer()
                 VStack{
                     Button(action: {
-                        Task {
-                           let datos =  await rootViewModel.onPokemon() { readError in
-                                DispatchQueue.main.async {
-                                    switch readError {
-                                    case .serverError:
-                                        print("Server error pop up")
-                                    case .unknownError:
-                                        print("Unknown error pop up")
-                                    case .none:
-                                        print("Chargue Data Pokemon")
-                                        self.cargarInfoPokemon = true
-                                        self.isLoading = true
-
+                        authentication.authenticateUser { isUserAuthenticated in
+                            if !isUserAuthenticated {
+                                print("Error authentication face ID")
+                            }else {
+                                Task {
+                                    let datos =  await rootViewModel.onPokemon() { readError in
+                                        DispatchQueue.main.async {
+                                            switch readError {
+                                            case .serverError:
+                                                print("Server error pop up")
+                                            case .unknownError:
+                                                print("Unknown error pop up")
+                                            case .none:
+                                                print("Chargue Data Pokemon")
+                                                self.cargarInfoPokemon = true
+                                                self.isLoading = true
+                                                
+                                            }
+                                        }
+                                    }
+                                    
+                                    if self.cargarInfoPokemon{
+                                        guard let data = datos.first?.results else {
+                                            print("Error dispatch data from Pokemon")
+                                            return
+                                        }
+                                        for dato in data {
+                                            rootViewModel.listInfoPokemon.append(await rootViewModel.onListPokemon(dataPoke: dato))
+                                        }
+                                        rootViewModel.status = .loaded
                                     }
                                 }
-                            }
-                            
-                            if self.cargarInfoPokemon{
-                                guard let data = datos.first?.results else {
-                                    print("Error dispatch data from Pokemon")
-                                    return
-                                }
-                                for dato in data {
-                                    rootViewModel.listInfoPokemon.append(await rootViewModel.onListPokemon(dataPoke: dato))
-                                }
-                                rootViewModel.status = .loaded
                             }
                         }
                         

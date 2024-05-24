@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import LocalAuthentication
 
 enum Status {
     case none, loading, loaded
@@ -23,16 +24,28 @@ final class RootViewModel: ObservableObject {
     // MARK: Properties
     let repository: RepositoryProtocol
     @Published var status = Status.none
+    let authentication: Authentication
 
 
     // MARK: Init
     init(repository: RepositoryProtocol) {
         self.repository = repository
+        self.authentication = Authentication(context: LAContext())
     }
         
     // MARK: Functions
     func onPokemon(completion: ((PokemonError) -> Void)?) async -> [PokemonModel]{
         var datos : [PokemonModel] = []
+        
+//        authentication.authenticateUser { isUserAuthenticated in
+//            if !isUserAuthenticated {
+//                completion?(.authenticationError)
+//                return
+//            }else {
+//                
+//            }
+//        }
+
         do {
             if let (pokelist, pokemonError) = try await repository.pokemon() {
                 switch pokemonError {
@@ -43,11 +56,10 @@ final class RootViewModel: ObservableObject {
                 case .LoadServerSuccess:
                     datos.append(pokelist!)
                     completion?(.none)
-                    
                 }
             }
         } catch {
-            print("Error while login in onLogin catch block")
+            print("Error reading data from the Pokemon API")
             completion?(.unknownError)
         }
         return datos
@@ -61,7 +73,7 @@ final class RootViewModel: ObservableObject {
                 }
             
         } catch {
-            print("Error while login in onLogin catch block")
+            print("Error reading data from the Pokemon API List")
         }
         return datos!
     }
