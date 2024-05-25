@@ -112,7 +112,7 @@ final class RemoteDataSourceImpl: RemoteDataSourceProtocol {
     func speciesPokemon(species: String) async throws -> (SpeciesPokemonModel?) {
         // Obtenemos la request
         guard let URLRequest = urlRequestHelper.speciesPokemon(species: species)  else {
-            print("Error while creating the URLRequest for the heroes")
+            print("Error while creating the URLRequest for the pokemon")
             return nil
         }
         

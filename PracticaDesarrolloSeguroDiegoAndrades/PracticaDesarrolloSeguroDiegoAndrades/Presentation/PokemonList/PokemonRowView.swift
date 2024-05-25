@@ -87,7 +87,9 @@ struct PokemonRowView: View {
                     Task {
                         let description = await rootViewModel.onSpeciesPokemon(species:pokemon.species.url)
                         for data in description.flavorTextEntries {
-                            if data.language.name == "es"{
+                            let currentLocale = Locale.current.language.languageCode?.identifier ?? "en"
+                            let languageCode = currentLocale == "en" ? "en" : "es"
+                            if data.language.name == languageCode{
                                 text = text + data.flavorText
                             }
                         }

@@ -81,7 +81,7 @@ struct PokemonHome: View {
                         }
                         
                     }, label: {
-                        Text("Entrar")
+                        Text("enter")
                             .font(.title3)
                             .fontWeight(.semibold)
                             .foregroundColor(.white)
@@ -92,7 +92,7 @@ struct PokemonHome: View {
                             .shadow(radius: 10.0, x: 20, y: 10)
                     })
                 }
-                Text("Práctica Desarrollo Seguro")
+                Text("home")
                     .font(.title2)
                     .bold()
                     .foregroundStyle(Color(.blue))

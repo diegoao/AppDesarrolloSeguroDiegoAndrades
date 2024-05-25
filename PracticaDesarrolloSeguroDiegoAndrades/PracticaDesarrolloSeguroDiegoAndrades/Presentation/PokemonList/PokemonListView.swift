@@ -13,7 +13,7 @@ struct PokemonListView: View {
     var body: some View {
 
         VStack{
-            Text("Pokemon List").font(.title2)
+            Text("title1").font(.title2)
                 .bold()
             
             NavigationStack{
