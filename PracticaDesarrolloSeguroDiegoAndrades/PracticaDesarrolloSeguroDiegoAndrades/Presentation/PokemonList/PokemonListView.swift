@@ -38,14 +38,7 @@ struct PokemonListView: View {
                 .background(Color.black.opacity(0.5))
             }
         }
-        
-//        .onAppear {
-//            // Puedes usar print aquí si necesitas depurar
-//            print(rootViewModel.listInfoPokemon)
-//        }
-        
     }
-    
 }
 
 

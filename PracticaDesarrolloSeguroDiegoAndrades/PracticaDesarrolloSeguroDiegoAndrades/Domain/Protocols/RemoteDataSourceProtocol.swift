@@ -15,6 +15,7 @@ protocol RemoteDataSourceProtocol {
     // MARK: Functions
     func pokemon() async throws -> (PokemonModel?, PokemonServerError)?
     func InfoPokemon(pokeData: Result) async throws -> (PokemonInfoModel?)
+    func speciesPokemon(species: String) async throws -> (SpeciesPokemonModel?)
 }
 
 enum PokemonServerError {

@@ -9,14 +9,18 @@ import SwiftUI
 
 
 struct PokemonRowView: View {
+    
+    @EnvironmentObject var rootViewModel: RootViewModel
     var pokemon: PokemonInfoModel
     @State private var text: String = ""
+    
 
 
     var body: some View {
-    
+        
             ZStack(alignment: .topLeading ){
                 
+
                 Rectangle()
                     .fill(Color.gray.opacity(0.2))
                     .frame(width: 362, height: 480)
@@ -55,10 +59,10 @@ struct PokemonRowView: View {
                                 .padding([.leading, . trailing], 32)
                                 .opacity(1)
                         }
+                        
                     
                     }
                     
- 
                     VStack{
                         ScrollView {
                             VStack{
@@ -78,6 +82,20 @@ struct PokemonRowView: View {
                     
                 }
                 .padding(.top, 20)
+                .onAppear {
+                    DispatchQueue.main.async {
+                        Task {
+                            let description = await rootViewModel.onSpeciesPokemon(species:pokemon.species.url)
+                            for data in description.flavorTextEntries {
+                                if data.language.name == "es"{
+                                    text = text + data.flavorText
+                                }
+                            }
+                            print(text)
+                            print()
+                        }
+                    }
+                }
             }
         }
 }

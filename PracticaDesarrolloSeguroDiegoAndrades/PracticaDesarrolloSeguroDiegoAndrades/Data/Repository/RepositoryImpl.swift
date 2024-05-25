@@ -23,4 +23,9 @@ final class RepositoryImpl: RepositoryProtocol {
     func InfoPokemon(pokeData: Result) async throws -> (PokemonInfoModel?){
         return try await remoteDataSource.InfoPokemon(pokeData: pokeData)
     }
+    
+    func speciesPokemon(species: String) async throws -> (SpeciesPokemonModel?){
+        return try await remoteDataSource.speciesPokemon(species: species)
+    }
+   
 }

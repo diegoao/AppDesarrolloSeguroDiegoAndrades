@@ -8,6 +8,8 @@
 import Foundation
 
 final class URLRequestHelperImpl: URLRequestHelperProtocol {
+
+    
  
     // MARK: Properties
     
@@ -18,7 +20,7 @@ final class URLRequestHelperImpl: URLRequestHelperProtocol {
         let crypto = Crypto()
         guard let baseURL = crypto.getDecrypted(data: String("\(endpoints.baseURL)")),
               let nPokemon = crypto.getDecrypted(data: String("\(endpoints.pokemon)")) else {
-            print("Error while creating URL: baseURL or nPokemon is nil")
+            print("Error while creating URL: baseURL or onPokemon is nil")
             return nil
         }
         
@@ -46,6 +48,18 @@ final class URLRequestHelperImpl: URLRequestHelperProtocol {
             return nil
         }
  
+        // URL request
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "GET"
+        return urlRequest
+    }
+    
+    func speciesPokemon(species: String) -> URLRequest? {
+        // Get URL
+        guard let url = URL(string: species) else {
+            print("Error getting pokemon url")
+            return nil
+        }
         // URL request
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"

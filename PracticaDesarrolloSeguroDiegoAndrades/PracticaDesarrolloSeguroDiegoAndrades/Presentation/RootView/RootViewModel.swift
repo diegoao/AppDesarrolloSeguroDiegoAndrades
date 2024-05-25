@@ -36,16 +36,6 @@ final class RootViewModel: ObservableObject {
     // MARK: Functions
     func onPokemon(completion: ((PokemonError) -> Void)?) async -> [PokemonModel]{
         var datos : [PokemonModel] = []
-        
-//        authentication.authenticateUser { isUserAuthenticated in
-//            if !isUserAuthenticated {
-//                completion?(.authenticationError)
-//                return
-//            }else {
-//                
-//            }
-//        }
-
         do {
             if let (pokelist, pokemonError) = try await repository.pokemon() {
                 switch pokemonError {
@@ -70,6 +60,19 @@ final class RootViewModel: ObservableObject {
         do {
             if let pokelist = try await repository.InfoPokemon(pokeData: dataPoke) {
                     datos = pokelist
+                }
+            
+        } catch {
+            print("Error reading data from the Pokemon API List")
+        }
+        return datos!
+    }
+    
+    func onSpeciesPokemon(species: String) async -> SpeciesPokemonModel{
+        var datos: SpeciesPokemonModel? = nil
+        do {
+            if let speciesList = try await repository.speciesPokemon(species: species){
+                    datos = speciesList
                 }
             
         } catch {
