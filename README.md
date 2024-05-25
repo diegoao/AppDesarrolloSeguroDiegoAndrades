@@ -30,7 +30,7 @@ La práctica consta de varias pantallas:
 | 1 | 2 | 3 | 4 |
 
 ```
-1.Pantalla de Home, pulsado entrar nos
+1.Pantalla de Home, pulsado acceder nos
 solicitará el acceso mediante face id y
 cargará la lista de pokemon.
 ```
