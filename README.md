@@ -26,8 +26,8 @@ https://pokeapi.com
 
 La práctica consta de varias pantallas:
 | ![Simulador1](https://github.com/diegoao/AppDesarrolloSeguroDiegoAndrades/blob/main/Screenshots%20Readme/imagen1.png) | ![Simulador2](https://github.com/diegoao/AppDesarrolloSeguroDiegoAndrades/blob/main/Screenshots%20Readme/imagen2.png) | ![Simulador3](https://github.com/diegoao/AppDesarrolloSeguroDiegoAndrades/blob/main/Screenshots%20Readme/imagen3.png) | ![Simulador4](https://github.com/diegoao/AppDesarrolloSeguroDiegoAndrades/blob/main/Screenshots%20Readme/imagen4.png) |
-| --- | --- | --- | --- | --- | 
-| 1 | 2 | 3 | 4 | 5 |
+| --- | --- | --- | --- | 
+| 1 | 2 | 3 | 4 |
 
 ```
 1.Pantalla de Home, pulsado entrar nos
