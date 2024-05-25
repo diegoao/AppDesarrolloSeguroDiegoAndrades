@@ -80,9 +80,6 @@ extension SSLPinningDelegate: URLSessionDelegate{
 //MARK: - SSLPinning extension: SHA
 extension SSLPinningDelegate{
 
-    /// Create a SHA256 representation of the data passed as parameter (crypto kit)
-    /// - Parameter data: The data that will be converted to SHA256.
-    /// - Returns: The SHA256 representation of data.
     private func sha256CryptoKit(data: Data) -> String {
         let hash = SHA256.hash(data: data)
         return Data(hash).base64EncodedString()

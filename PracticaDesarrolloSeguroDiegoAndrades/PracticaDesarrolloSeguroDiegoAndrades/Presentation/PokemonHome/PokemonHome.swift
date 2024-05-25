@@ -54,9 +54,9 @@ struct PokemonHome: View {
                                         DispatchQueue.main.async {
                                             switch readError {
                                             case .serverError:
-                                                print("Server error pop up")
+                                                print("Server error")
                                             case .unknownError:
-                                                print("Unknown error pop up")
+                                                print("Unknown error")
                                             case .none:
                                                 print("Chargue Data Pokemon")
                                                 self.cargarInfoPokemon = true

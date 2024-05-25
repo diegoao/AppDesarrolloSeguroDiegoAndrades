@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct RootView: View {
-
+    
     // MARK: - Properties
     @EnvironmentObject var rootViewModel: RootViewModel
-
+    
     var body: some View {
         switch (rootViewModel.status) {
         case Status.none:
-           
+            
             PokemonHome()
         case Status.loading:
             Text("Loading")
@@ -29,4 +29,4 @@ struct RootView: View {
 #Preview {
     RootView()
 }
- 
+

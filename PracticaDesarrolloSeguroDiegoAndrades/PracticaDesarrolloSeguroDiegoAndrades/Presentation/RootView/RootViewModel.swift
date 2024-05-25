@@ -25,14 +25,14 @@ final class RootViewModel: ObservableObject {
     let repository: RepositoryProtocol
     @Published var status = Status.none
     let authentication: Authentication
-
-
+    
+    
     // MARK: Init
     init(repository: RepositoryProtocol) {
         self.repository = repository
         self.authentication = Authentication(context: LAContext())
     }
-        
+    
     // MARK: Functions
     func onPokemon(completion: ((PokemonError) -> Void)?) async -> [PokemonModel]{
         var datos : [PokemonModel] = []
@@ -54,13 +54,13 @@ final class RootViewModel: ObservableObject {
         }
         return datos
     }
- 
+    
     func onListPokemon(dataPoke: Result) async -> PokemonInfoModel{
         var datos: PokemonInfoModel? = nil
         do {
             if let pokelist = try await repository.InfoPokemon(pokeData: dataPoke) {
-                    datos = pokelist
-                }
+                datos = pokelist
+            }
             
         } catch {
             print("Error reading data from the Pokemon API List")
@@ -72,8 +72,8 @@ final class RootViewModel: ObservableObject {
         var datos: SpeciesPokemonModel? = nil
         do {
             if let speciesList = try await repository.speciesPokemon(species: species){
-                    datos = speciesList
-                }
+                datos = speciesList
+            }
             
         } catch {
             print("Error reading data from the Pokemon API List")
