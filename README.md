@@ -2,7 +2,7 @@
 
 Práctica realizada para el módulo de Programación IOS DESARROLLO SEGURO por Diego Andrades.
 
-**KeepCoding - Profesor Ismael
+**KeepCoding - Profesor Ismael**
 
 ## La práctica contiene:
 - Control de acceso seguro mediante el método FaceID.
