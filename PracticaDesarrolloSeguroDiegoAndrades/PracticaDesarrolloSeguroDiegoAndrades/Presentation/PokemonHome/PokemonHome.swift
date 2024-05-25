@@ -45,11 +45,13 @@ struct PokemonHome: View {
                 Spacer()
                 VStack{
                     Button(action: {
+                        print("Waiting for Face Id Authentication")
                         authentication.authenticateUser { isUserAuthenticated in
                             if !isUserAuthenticated {
                                 print("Error authentication face ID")
                             }else {
                                 Task {
+                                 //MARK: Se realiza la primera petición a red
                                     let datos =  await rootViewModel.onPokemon() { readError in
                                         DispatchQueue.main.async {
                                             switch readError {
@@ -65,7 +67,7 @@ struct PokemonHome: View {
                                             }
                                         }
                                     }
-                                    
+                                    //MARK: - Cargar los datos de cada pokemon
                                     if self.cargarInfoPokemon{
                                         guard let data = datos.first?.results else {
                                             print("Error dispatch data from Pokemon")
@@ -109,3 +111,4 @@ struct PokemonHome: View {
 #Preview {
     PokemonHome()
 }
+

@@ -13,20 +13,16 @@ struct PokemonRowView: View {
     @EnvironmentObject var rootViewModel: RootViewModel
     var pokemon: PokemonInfoModel
     @State private var text: String = ""
-    
-
 
     var body: some View {
         
         ZStack(alignment: .topLeading ){
-            
-            
+ 
             Rectangle()
                 .fill(Color.gray.opacity(0.4))
                 .frame(width: 362, height: 480)
                 .cornerRadius(30)
-            
-            
+
             VStack{
                 VStack{
                     ZStack{
@@ -59,8 +55,6 @@ struct PokemonRowView: View {
                             .padding([.leading, . trailing], 32)
                             .opacity(1)
                     }
-                    
-                    
                 }
                 
                 VStack{
@@ -77,9 +71,7 @@ struct PokemonRowView: View {
                         .background(Color.clear)
                     }
                     Spacer()
-                    
                 }
-                
             }
             .padding(.top, 20)
             .onAppear {
@@ -99,6 +91,7 @@ struct PokemonRowView: View {
         }
     }
 }
+
 
 
 

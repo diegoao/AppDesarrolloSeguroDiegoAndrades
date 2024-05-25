@@ -185,16 +185,8 @@
 				52EAF6C52BFA917F00089233 /* PokemonHome */,
 				52847F8D2BFA24B0005A7048 /* PokemonList */,
 				52847F882BFA22C1005A7048 /* RootView */,
-				52847F6F2BFA0AE5005A7048 /* Home */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		52847F6F2BFA0AE5005A7048 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		52847F702BFA0AEB005A7048 /* Domain */ = {

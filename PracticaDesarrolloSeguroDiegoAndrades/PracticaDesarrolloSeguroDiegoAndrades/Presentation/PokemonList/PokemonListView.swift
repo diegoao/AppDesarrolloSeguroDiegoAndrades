@@ -19,6 +19,7 @@ struct PokemonListView: View {
             NavigationStack{
                 List{
                     let pokemon = rootViewModel.listInfoPokemon
+                    //MARK: - Se crean celdas personalizadas por cada pokemon
                     if  !pokemon.isEmpty {
                         ForEach(pokemon.indices, id: \.self) { index in
                             let poke = pokemon[index]
@@ -48,3 +49,4 @@ struct PokemonListView: View {
 #Preview {
     PokemonListView()
 }
+

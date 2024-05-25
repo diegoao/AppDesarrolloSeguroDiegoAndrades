@@ -14,12 +14,12 @@ class Authentication {
     private let context: LAContext
     private var error: NSError?
     
-    //MARK: Init
+    //MARK: Inicializador
     init(context: LAContext) {
         self.context = context
     }
     
-    //MARK: Methods
+    //MARK: Métodos
     func authenticateUser(completion: @escaping (Bool)-> Void){
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error){
             let razon = "Identificarse para obtener los datos"
